@@ -1,0 +1,106 @@
+Claro! Aqui estão as explicações com os números formatados para facilitar a cópia:
+
+1) justify-content: flex-end;
+   Alinha os itens ao final do contêiner no eixo horizontal. Todos os itens vão para o final (direita).
+
+2) justify-content: center;  
+   Centraliza os itens no contêiner ao longo do eixo horizontal. Os itens ficam no meio.
+
+3) justify-content: space-around; 
+   Distribui os itens com espaço igual ao redor de cada um. O espaço entre os itens e as bordas do contêiner é a metade do espaço entre os itens.
+
+4) justify-content: space-between; 
+   Distribui os itens com o máximo de espaço possível entre eles. O primeiro item é alinhado ao início e o último ao final, sem espaço nas bordas.
+
+5) align-items: flex-end; 
+   Alinha os itens ao final do contêiner no eixo vertical. Os itens são empilhados na parte inferior.
+
+6) align-items: center;
+   Centraliza os itens no eixo vertical. Os itens ficam alinhados ao centro.  
+
+   justify-content: center;
+   Centraliza os itens no eixo horizontal. Os itens ficam igualmente distribuídos no meio.
+
+7) justify-content: space-around; 
+   Distribui os itens com espaço igual ao redor de cada um, mantendo o mesmo efeito do item 3.
+
+8) flex-direction: row-reverse;  
+   Inverte a direção dos itens no eixo horizontal. Os itens são dispostos da direita para a esquerda.
+
+9) flex-direction: column; 
+   Organiza os itens em uma coluna. Os itens são empilhados verticalmente.
+
+10) flex-direction: row-reverse; 
+    Inverte a direção dos itens para a direita e os alinha ao final do contêiner. Os itens vão da direita para a esquerda e ficam alinhados à direita.  
+    
+    justify-content: flex-end; 
+    Alinha os itens ao final do contêiner.
+
+11) flex-direction: column;  
+    Organiza os itens em uma coluna.  
+    
+    justify-content: flex-end;
+    Alinha os itens ao final do contêiner verticalmente.
+
+12) flex-direction: column-reverse; 
+    Organiza os itens em uma coluna invertida. O primeiro item aparece na parte inferior.  
+    
+    justify-content: space-between;  
+    Distribui o espaço entre os itens na coluna invertida.
+
+13) flex-direction: row-reverse;  
+    Inverte a direção dos itens horizontalmente.  
+    
+    justify-content: center; 
+    Centraliza os itens no eixo horizontal.  
+    
+    align-items: flex-end;
+    Alinha os itens ao final do contêiner verticalmente.
+
+14) order: 1; 
+    Altera a ordem de exibição do item. Itens com ordem menor aparecem antes.
+
+15) order: -3;  
+    Define uma ordem negativa, fazendo com que o item apareça antes de itens com ordem zero ou positiva.
+
+16) align-self: flex-end;  
+    Alinha o item individualmente ao final do contêiner verticalmente, sobrescrevendo o alinhamento padrão.
+
+17) align-self: flex-end;
+    Alinha o item ao final do contêiner verticalmente.  
+
+    order: 1;  
+    Define a ordem do item como 1.
+
+18) flex-wrap: wrap;
+    Permite que os itens que não cabem em uma linha sejam movidos para uma nova linha.
+
+19) flex-direction: column; 
+    Organiza os itens em uma coluna.  
+    
+    flex-wrap: wrap; 
+    Permite que itens sejam movidos para novas colunas, se necessário.
+
+20) flex-flow: column wrap;
+    Combina `flex-direction: column;` e `flex-wrap: wrap;`. Os itens são organizados em colunas e podem envolver para novas colunas.
+
+21) align-content: flex-start;
+    Alinha as linhas do contêiner ao início do espaço disponível no eixo vertical.
+
+22) align-content: flex-end;  
+    Alinha as linhas do contêiner ao final do espaço disponível no eixo vertical.
+
+23) flex-direction: column-reverse;
+    Organiza os itens em uma coluna invertida.  
+    
+    align-content: center;
+    Centraliza as linhas no eixo vertical.
+
+24) flex-flow: column-reverse wrap-reverse; 
+    Combina várias propriedades. Organiza os itens em uma coluna invertida e permite que eles se movam para novas colunas de forma invertida.  
+    
+    justify-content: center; 
+    Centraliza os itens no eixo horizontal.  
+    
+    align-content: space-between;
+    Distribui o espaço entre as linhas de forma uniforme.

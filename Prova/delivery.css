@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: rgb(252, 122, 0);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+#banner {
+    background-color: rgb(255, 196, 119);
+    padding: 50px 0;
+    text-align: center;
+}
+#banner h2 {
+    font-size: 36px;
+}
+#banner p {
+    font-size: 18px;
+}
+.button {
+    padding: 10px 20px;
+    background-color: rgb(252, 122, 0);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+#menu {
+    padding: 40px 20px;
+    text-align: center;
+}
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.item {
+    width: 30%;
+    text-align: center;
+    margin: 20px 0;
+}
+.item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+#promo {
+    background-color: rgb(255, 196, 119);
+    padding: 40px;
+    text-align: center;
+}
+footer {
+    background-color: rgb(252, 122, 0);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+#chat-box {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+}
+#chat-header {
+    background-color: rgb(252, 122, 0);
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+#chat-body {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+}
+#chat-footer {
+    display: flex;
+    padding: 10px;
+    background-color: rgb(252, 122, 0);
+}
+#chat-input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+#send-btn {
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .menu-items {
+        flex-direction: column;
+    }
+    .item {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        font-size: 14px;
+    }
+    .button {
+        font-size: 16px;
+    }
+    #chat-box {
+        width: 100%;
+        right: 0;
+    }
+}

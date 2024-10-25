@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.bandeira {
+    width: 150px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.bandeira-i {
+    background: linear-gradient(to right, green 33%, white 33%, white 66%, red 66%);
+}
+.bandeira-j {
+    background: white;
+    position: relative;
+}
+.bandeira-j::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+.bandeira-n {
+    background: linear-gradient(to bottom, red 33%, white 33%, white 66%, blue 66%);
+}
+.bandeira-name {
+
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.bandeira-container:hover .bandeira-name{
+    opacity: 1;
+}
+.bandeira:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

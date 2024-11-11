@@ -6,25 +6,29 @@
     <title>12</title>
 </head>
 <body>
-    <label for="">Insira dois números</label>
-    <form action="">
-        <label for="a1">Número 1</label>
-        <input type="text" id="a1"> <br>
-        <label for="a2">Número 2</label>
-        <input type="text" id="a2">
-        <input type="submit" id="c3">
-    </form>
+    <label for="">Insira dois números</label> <br>
+    <label for="a1">Número 1</label>
+    <input type="text" id="a1"> <br>
+    <label for="a2">Número 2</label>
+    <input type="text" id="a2"> <br>
+    <button id="bt" onclick="soma()">Somar</button>
+    <p id="resul"></p>
     
     <script>
-        let a = parseFloat(document.getElementById(a1));
-        let b = parseFloat(document.getElementById(a2));
-        function soma(a,b){
-            return parseFloat(a)+parseFloat(b);
+
+        function teste(){
+            let bt = document.querySelector("#bt");
+            document.body.addEventListener("click",soma);
         }
-            let resl = soma(a,b);
+
+        function soma(){
+            a = parseInt(document.getElementById("a1").value);
+            b = parseInt(document.getElementById("a2").value);
+            let resl = a+b;
             alert(resl);
             console.log(resl);
-            document.write(resl);  
+            document.getElementById("resul").innerText = resl;
+        }
     </script>
 </body>
 </html>

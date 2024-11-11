@@ -10,6 +10,7 @@
         let a = prompt("Digite um texto");
         
         function ehPalindromo(str){
+            str = str.toUpperCase(str);
             let rts = str.split('').reverse().join('');
             if(rts == str){
                 return "é palindromo";

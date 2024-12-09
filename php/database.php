@@ -26,9 +26,5 @@ function check_conn($conn_id){
     }
 }
 
-
-
-
-var_dump(connecta_db());
-check_conn(connecta_db());
+return(connecta_db());
 ?>

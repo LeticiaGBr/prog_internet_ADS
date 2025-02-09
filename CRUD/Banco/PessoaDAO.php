@@ -26,25 +26,20 @@
     function login($usuario, $senha) {
         $db = conecta();
         
-        // Preparando a consulta para buscar o usuário e a senha
         $sql = "SELECT * FROM usuario WHERE usuario = ?";
-        
         $stmt = $db->prepare($sql);
         $stmt->bindValue(1, $usuario);
         $stmt->execute();
         
-        // Verificando se o usuário foi encontrado
         $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        if ($resultado && password_verify($senha, $resultado['senha'])) {
-            // Retorna os dados do usuário se a senha for correta
+    
+        if ($resultado && $senha == $resultado['senha']) { // Comparação direta (NÃO SEGURO)
             return $resultado;
         } else {
-            // Retorna false caso o login falhe
             return false;
         }
     }
-
+    
     function getUsuario($id){
         $db =conecta();
         $sql = "select * from usuario where idusuario = ?";

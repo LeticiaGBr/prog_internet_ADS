@@ -2,9 +2,9 @@
 /* aquivos com funções que manifipulam o banco de dados e permite inserção, edicação , recuperação de usuarios */
 
 function conectar() {
-    $host = "localhost"; // O XAMPP usa 'localhost'
-    $db_name = "crud_ppi"; // Nome do banco de dados
-    $username = "root"; // Usuário padrão do MySQL no XAMPP
+    $host = "localhost"; 
+    $db_name = "crud_ppi"; 
+    $username = "root"; 
     $password = ""; // Senha padrão do MySQL no XAMPP é vazia
     $conn = null;
 
@@ -17,9 +17,9 @@ function conectar() {
 
     return $conn;
 }
-function getAllUser( $str =""){
+function getAllUsers() {
     $conn = conectar();
-    $sql = "SELECT * FROM usuarios WHERE nome LIKE '%$str%'";
+    $sql = "SELECT * FROM usuarios"; // Atualizado para 'usuarios'
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($resultado) {
         
-        $_SESSION['usuario_id'] = $resultado['idusuario']; 
+        $_SESSION['usuario_id'] = $resultado['id']; 
         $_SESSION['usuario_nome'] = $resultado['nome'];
         header("Location: Listar.php");
         exit();

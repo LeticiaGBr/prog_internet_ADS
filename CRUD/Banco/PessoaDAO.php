@@ -42,7 +42,7 @@
     
     function getUsuario($id){
         $db =conecta();
-        $sql = "select * from usuario where idusuario = ?";
+        $sql = "select * from usuario where id = ?";
         $stmt = $db->prepare($sql);
         $stmt->bindValue(1,$id);
         $stmt->execute();
@@ -51,14 +51,14 @@
     }
     function deletUsuario($id){
         $db = conecta();
-        $sql = "DELETE FROM usuario WHERE idusuario = ?";
+        $sql = "DELETE FROM usuario WHERE id = ?";
         $stmt = $db -> prepare($sql);
         $stmt->bindValue(1,$id);
         $stmt->execute();
     }
     function editUsuario($id, $nome, $email, $usuario, $senha) {
         $db = conecta();
-        $sql = "UPDATE usuario SET nome = ?, email = ?, usuario = ?, senha = ? WHERE idusuario = ?";
+        $sql = "UPDATE usuario SET nome = ?, email = ?, usuario = ?, senha = ? WHERE id = ?";
         $stmt = $db->prepare($sql);
         $stmt->bindValue(1, $nome);
         $stmt->bindValue(2, $email);

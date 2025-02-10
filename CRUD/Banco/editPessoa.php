@@ -102,7 +102,7 @@
 
 <h2>Editar Pessoa</h2>
 <form action="pessoaControle.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $pessoa['idusuario']; ?>">
+    <input type="hidden" name="id" value="<?php echo $pessoa['id']; ?>">
     <label for="nome">Nome: </label>
     <input type="text" name="nome" value="<?php echo $pessoa['nome']; ?>" required>
     <label for="email">Email: </label>

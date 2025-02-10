@@ -1,7 +1,7 @@
 <?php 
     function conecta(){
         $user="root";
-        $senha="Seventeen.17";
+        $senha="aluno";
         $database="crud_ppi";
         $host="localhost";
         

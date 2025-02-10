@@ -46,8 +46,8 @@
         ?>
             <tr>
                 <td>
-                    <a href="editPessoa.php?pessoa_id=<?php echo $pessoa['idusuario']; ?>">
-                        <?php echo $pessoa['idusuario']; ?>
+                    <a href="editPessoa.php?pessoa_id=<?php echo $pessoa['id']; ?>">
+                        <?php echo $pessoa['id']; ?>
                     </a>
                 </td>
                 <td><?php echo $pessoa['nome']; ?></td>

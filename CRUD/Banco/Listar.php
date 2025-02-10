@@ -15,10 +15,27 @@
             padding: 10px;
         }
         th {
-            background-color:white;
+            background-color: white;
         }
         td {
             height: 50px;
+        }
+        .btn-container {
+            margin: 20px 0;
+            text-align: right;
+        }
+        .btn-cadastrar {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-cadastrar:hover {
+            background-color: darkblue;
         }
     </style>
 </head>
@@ -32,6 +49,10 @@
 ?>
 
     <h2>Lista de Usuários</h2>
+
+    <div class="btn-container">
+        <a href="Cadastrar.php" class="btn-cadastrar">Cadastrar</a>
+    </div>
 
     <table>
         <tr>
@@ -54,7 +75,6 @@
                 <td><?php echo $pessoa['email']; ?></td>
                 <td><?php echo $pessoa['usuario']; ?></td>
                 <td><?php echo $pessoa['senha']; ?></td> 
-                
             </tr>
         <?php
         }

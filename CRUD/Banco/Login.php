@@ -13,12 +13,12 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #e8f5e9; /* Verde claro */
+            background-color:white
         }
 
         .login-container {
-            background-color: #ffffff; /* Branco */
-            border: 2px solid #4caf50; /* Verde escuro */
+            background-color:white;
+            border: 2px solid blue;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -27,7 +27,7 @@
         }
 
         .login-container h1 {
-            color: #4caf50; /* Verde escuro */
+            color:blue;
             margin-bottom: 20px;
         }
 
@@ -36,12 +36,12 @@
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #4caf50; /* Verde escuro */
+            border: 1px solid blue; 
             border-radius: 5px;
         }
 
         .login-container button {
-            background-color: #4caf50; /* Verde escuro */
+            background-color:green; 
             color: white;
             border: none;
             padding: 10px 15px;
@@ -51,11 +51,11 @@
         }
 
         .login-container button:hover {
-            background-color: #45a049; /* Verde escuro mais claro */
+            background-color:blue; 
         }
 
         .login-container a {
-            color: #4caf50; /* Verde escuro */
+            color: blue; 
             text-decoration: none;
             font-size: 14px;
         }

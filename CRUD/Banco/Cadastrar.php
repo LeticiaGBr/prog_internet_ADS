@@ -8,23 +8,23 @@
 <style>
         body {
             display: flex;
-            justify-content: center; /* Alinha o conteúdo horizontalmente */
-            align-items: center; /* Alinha o conteúdo verticalmente */
-            min-height: 100vh; /* Ocupa toda a altura da tela */
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
             margin: 0;
-            background-color: #f4f4f4; /* Cor de fundo da página */
+            background-color:white;
             font-family: Arial, sans-serif;
         }
 
-        /* Estilizando o formulário */
+        
         form {
             width: 100%;
-            max-width: 400px; /* Limita o tamanho máximo do form */
+            max-width: 400px; 
             padding: 20px;
             border: 2px solid #ccc;
             border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            box-shadow: 0 2px 10px black;
         }
 
         /* Estilo para os rótulos e inputs */
@@ -37,18 +37,18 @@
         input[type="text"],
         input[type="email"],
         input[type="password"] {
-            width: 100%; /* Tamanho total da caixa de texto */
+            width: 100%; 
             padding: 10px;
-            margin-bottom: 15px; /* Espaçamento entre os campos */
+            margin-bottom: 15px; 
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1em;
         }
 
         input[type="submit"] {
-            width: 100%; /* Largura total para o botão */
+            width: 100%; 
             padding: 12px;
-            background-color: #4CAF50; /* Cor verde do botão */
+            background-color:blue;
             color: white;
             border: none;
             border-radius: 4px;
@@ -58,7 +58,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049; /* Cor do botão quando passa o mouse */
+            background-color:blue;
         }
     </style>
 <body>

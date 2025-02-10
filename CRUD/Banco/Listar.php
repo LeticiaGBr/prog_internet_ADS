@@ -15,7 +15,7 @@
             padding: 10px;
         }
         th {
-            background-color: #f2f2f2;
+            background-color:white;
         }
         td {
             height: 50px;
@@ -39,7 +39,7 @@
             <th>Nome</th>
             <th>Email</th>
             <th>Usuário</th>
-            <th>Senha</th> <!-- Nova coluna de Senha -->
+            <th>Senha</th> 
         </tr>
         <?php
         foreach ($listaPessoa as $pessoa) {
@@ -53,7 +53,8 @@
                 <td><?php echo $pessoa['nome']; ?></td>
                 <td><?php echo $pessoa['email']; ?></td>
                 <td><?php echo $pessoa['usuario']; ?></td>
-                <td><?php echo $pessoa['senha']; ?></td> <!-- Exibe a senha -->
+                <td><?php echo $pessoa['senha']; ?></td> 
+                
             </tr>
         <?php
         }

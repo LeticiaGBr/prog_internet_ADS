@@ -33,7 +33,7 @@
         
         $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
     
-        if ($resultado && $senha == $resultado['senha']) { // Comparação direta (NÃO SEGURO)
+        if ($resultado && $senha == $resultado['senha']) { 
             return $resultado;
         } else {
             return false;
@@ -67,4 +67,5 @@
         $stmt->bindValue(5, $id);
         $stmt->execute();
     }
+    
 ?>

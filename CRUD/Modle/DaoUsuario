@@ -5,7 +5,7 @@ function conectar() {
     $host = "localhost"; 
     $db_name = "crud_ppi"; 
     $username = "root"; 
-    $password = ""; // Senha padrão do MySQL no XAMPP é vazia
+    $password = ""; 
     $conn = null;
 
     try {
@@ -19,7 +19,7 @@ function conectar() {
 }
 function getAllUsers() {
     $conn = conectar();
-    $sql = "SELECT * FROM usuarios"; // Atualizado para 'usuarios'
+    $sql = "SELECT * FROM usuarios"; 
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);

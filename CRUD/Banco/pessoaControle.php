@@ -1,8 +1,8 @@
 <?php
     include_once("Database.php");
-    include_once("PessoaDAO");
+    include_once("PessoaDAO.php");
    
-// Habilitar exibição de erros
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -14,7 +14,7 @@ error_reporting(E_ALL);
             $usuario = $_POST["usuario"];
             $senha = $_POST["senha"];
     
-            save($nome, $email, $usuario, $senha); // Certifique-se de passar os 4 argumentos
+            save($nome, $email, $usuario, $senha); 
             header("Location: Listar.php");
         } else {
             echo "Todos os campos são obrigatórios.";
@@ -27,8 +27,8 @@ error_reporting(E_ALL);
             $nome = $_POST["nome"];
             $email = $_POST["email"];
             $usuario = $_POST["usuario"];
-            $senha = $_POST["senha"]; // Corrigido o ponto e vírgula
-            editUsuario($id, $nome, $email, $usuario, $senha); // Atualizando usuário
+            $senha = $_POST["senha"]; 
+            editUsuario($id, $nome, $email, $usuario, $senha); 
             header("Location: Listar.php");
             exit();
         } else {

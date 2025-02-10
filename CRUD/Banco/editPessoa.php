@@ -1,6 +1,6 @@
 <?php
     include_once("Database.php");
-    include_once("PessoaDAO");
+    include_once("PessoaDAO.php");
 
     if (isset($_GET["pessoa_id"])) {
         $id2 = $_GET["pessoa_id"];
@@ -24,8 +24,15 @@
             align-items: center; 
             min-height: 100vh; 
             margin: 0;
-            background-color: #f4f4f4; 
+            background-color:white; 
             font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            align-self: flex-start; 
+            margin-left: 20px; 
+            font-size: 1.8em; 
+            font-weight: bold; 
         }
 
         fieldset {
@@ -34,7 +41,7 @@
             padding: 20px;
             border: 2px solid #ccc;
             border-radius: 8px;
-            background-color: #fff;
+            background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -64,7 +71,7 @@
         input[type="submit"] {
             width: 100%; 
             padding: 12px;
-            background-color: #4CAF50; 
+            background-color:blue; 
             color: white;
             border: none;
             border-radius: 4px;
@@ -74,7 +81,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;  
+            background-color:blue;  
         }
 
         .delete-btn {

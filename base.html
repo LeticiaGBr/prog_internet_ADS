@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Página Simples</title>
+    <style>
+table, td {border: 3px solid peru; border-collapse: collapse;}
+
+    </style>
 </head>
 <body>
-    <h1>bem-vindo ao inferno!</h1>
+    <h1 style = "color: red" >bem-vindo ao inferno!</h1>
     <p>divirta-se seu bosta</p>
 
     <h2>almoço</h2>
@@ -16,7 +20,7 @@
     </ul>
 
     <h2>almoço</h2>
-    <ol start = "5">
+    <ol start = "4" type = "A">
         <li>xereca</li>
         <li>bct</li>
         <li>xota</li>
@@ -25,6 +29,7 @@
  <h2>almoço</h2>
     <dl>
         <dt>xereca</dt>
+        <dd>fundamental, amo</dd>
         <dt>bct</dt>
         <dt>xota</dt>
     </dl>
@@ -38,12 +43,79 @@
         <textarea id="mensagem" name="mensagem"></textarea><br><br>
 
         <input type="submit" value="acabar com a sua vida">
+        </form>
 <br><br><br>
         <img src="corujafudida.jfif" alt="coruja fudida" width="400">
 
-        <p> <mark>Lorem ipsum dolor</mark> <strong>amet aaaaaaaaaaaaaaaaaaaaa</strong> <br>consectetur adipisicing elit. Amet culpa beatae laboriosam architecto nulla! Fuga totam laudantium voluptate atque tempore? Praesentium voluptatem eos earum tempore aperiam ea vitae? Soluta, architecto. </p>
+        <p> <mark>Lorem ipsum dolor</mark> <strong>amet aaaaaaaaaaaaaaaaaaaaa</strong> <br>consectetur <sub> elit.</sub> Amet culpa<sup> beatae laboriosam</sup> architecto nulla! Fuga totam laudantium voluptate atque tempore? Praesentium voluptatem eos earum tempore aperiam ea vitae? Soluta, architecto. </p>
+    
 
         <a href="https://www.megacurioso.com.br/animais/75612-24-especies-de-corujas-que-vao-te-impressionar.htm" target="_blank">pornografia</a>
-    </form>
+<br><br><br>
+         <table>
+        <tr>
+            <th>Categoria</th>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Comidas</td>
+            <td>1</td>
+            <td>Carne</td>
+            <td>10</td>
+            <td>40,00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Pão de Alho</td>
+            <td>10</td>
+            <td>16,00</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Linguiça de porco</td>
+            <td>2</td>
+            <td>15,00</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Bebidas</td>
+            <td>4</td>
+            <td>Coca-cola Zero</td>
+            <td>10</td>
+            <td>10,00</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Água c/ gás</td>
+            <td>10</td>
+            <td>3,00</td>
+        </tr>
+        <tr>
+            <td colspan="4">Total</td>
+            <td>#,##</td>
+        </tr>
+    </table>
+    
+<br><br><br>
+        
+        <h2>Login</h2>
+        <form action="http://google.com/search">
+            <label for="idnome">Nome</label>
+            <input id="idnome" type="text" name="q" value="Coruja feia" >
+            <input id="idnomes" type="text" name="q" placeholder="coloque o nome" >
+            <br>
+            <input type="password" name="senha" >
+            <input type="submit" value="Cadastra">
+            <input type="date" value="data" draggable="true">
+            <select name="uf" >
+             <option value="SC">Santa Cata</option>
+             <option value="PR">Paraná</option>
+
+            </select>
+
+        </form>
+
 </body>
 </html>

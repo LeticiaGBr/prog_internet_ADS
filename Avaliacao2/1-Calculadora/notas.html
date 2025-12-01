@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Bloco de Notas JS</title>
+
+<style>
+    body {
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100vh;
+        background: #f0f0f0;
+    }
+
+    /* Coluna da lista */
+    #lista {
+        width: 30%;
+        background: #ddd;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+    #lista h2 {
+        margin-top: 0;
+    }
+
+    .nota-item {
+        background: white;
+        padding: 10px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        border: 1px solid #bbb;
+    }
+
+    .nota-item:hover {
+        background: #f5f5f5;
+    }
+
+    /* Área de edição */
+    #editor {
+        width: 70%;
+        padding: 20px;
+        box-sizing: border-box;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #titulo, #conteudo {
+        width: 100%;
+        padding: 8px;
+    }
+
+    #conteudo {
+        height: 60vh;
+        resize: none;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .botoes {
+        display: flex;
+        gap: 10px;
+    }
+</style>
+
+</head>
+<body>
+
+    <!-- COLUNA ESQUERDA - LISTA DE NOTAS -->
+    <div id="lista">
+        <h2>Minhas Notas</h2>
+        <button onclick="novaNota()">+ Nova Nota</button>
+        <div id="notasContainer"></div>
+    </div>
+
+    <!-- COLUNA DIREITA - EDITOR -->
+    <div id="editor">
+        <input id="titulo" placeholder="Título da nota">
+        <textarea id="conteudo" placeholder="Digite sua nota aqui..."></textarea>
+
+        <div class="botoes">
+            <button onclick="salvarNota()">Salvar</button>
+            <button onclick="excluirNota()">Excluir</button>
+        </div>
+    </div>
+
+<script>
+/* ------------------------
+      LOCAL STORAGE
+-------------------------*/
+
+// Carrega notas do LocalStorage ou cria lista vazia
+let notas = JSON.parse(localStorage.getItem("notas")) || [];
+
+// Índice da nota atualmente sendo editada
+let notaAtual = null;
+
+
+/* ------------------------
+      LISTAR NOTAS
+-------------------------*/
+function listarNotas() {
+    const container = document.getElementById("notasContainer");
+    container.innerHTML = "";
+
+    notas.forEach((nota, i) => {
+        const div = document.createElement("div");
+        div.className = "nota-item";
+        div.innerText = nota.titulo || "(Sem título)";
+        div.onclick = () => abrirNota(i);
+        container.appendChild(div);
+    });
+}
+
+
+/* ------------------------
+      NOVA NOTA
+-------------------------*/
+function novaNota() {
+    notaAtual = null;
+    document.getElementById("titulo").value = "";
+    document.getElementById("conteudo").value = "";
+}
+
+
+/* ------------------------
+      ABRIR NOTA
+-------------------------*/
+function abrirNota(index) {
+    notaAtual = index;
+    document.getElementById("titulo").value = notas[index].titulo;
+    document.getElementById("conteudo").value = notas[index].conteudo;
+}
+
+
+/* ------------------------
+      SALVAR NOTA
+-------------------------*/
+function salvarNota() {
+    const titulo = document.getElementById("titulo").value.trim();
+    const conteudo = document.getElementById("conteudo").value.trim();
+
+    if (!titulo && !conteudo) {
+        alert("A nota está vazia!");
+        return;
+    }
+
+    const novaNota = { titulo, conteudo };
+
+    if (notaAtual === null) {
+        // Criar nova nota
+        notas.push(novaNota);
+    } else {
+        // Atualizar nota existente
+        notas[notaAtual] = novaNota;
+    }
+
+    // Gravar no LocalStorage
+    localStorage.setItem("notas", JSON.stringify(notas));
+
+    listarNotas();
+    alert("Nota salva!");
+}
+
+
+/* ------------------------
+      EXCLUIR NOTA
+-------------------------*/
+function excluirNota() {
+    if (notaAtual === null) {
+        alert("Nenhuma nota aberta para excluir.");
+        return;
+    }
+
+    if (confirm("Deseja realmente excluir esta nota?")) {
+        notas.splice(notaAtual, 1);
+        localStorage.setItem("notas", JSON.stringify(notas));
+        novaNota();
+        listarNotas();
+        alert("Nota excluída!");
+    }
+}
+
+
+/* ------------------------
+      INICIALIZAÇÃO
+-------------------------*/
+listarNotas();
+
+</script>
+
+</body>
+</html>

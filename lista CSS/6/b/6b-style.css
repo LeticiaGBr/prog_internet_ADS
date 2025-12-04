@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-superior {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+}
+
+.box {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.roxo {
+    background-color: purple;
+}
+
+.verde {
+    background-color: green;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.amarelo {
+    background-color: yellow;
+}

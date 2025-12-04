@@ -1,0 +1,82 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo {
+    background: black;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.bolinha {
+    width: 30px;
+    height: 30px;
+    background: blue;
+    border-radius: 50%;
+}
+
+.corpo {
+    display: flex;
+    flex: 1;
+}
+.navegacao {
+    width: 160px;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cabecalho {
+    background: blue;
+    height: 90px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conteudo {
+    background: purple;
+    flex: 1;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rodape {
+    background: blue;
+    height: 90px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<title>Bandeiras</title>
+<style>
+html,body{height:100%;margin:0}
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f0f0f0;
+  font-family:Arial, sans-serif;
+}
+
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:28px;
+  justify-content:center;
+  padding:24px;
+}
+
+.bandeira{
+  width:360px;
+  height:240px;
+  position:relative;
+  border:1px solid black;
+  box-sizing:border-box;
+}
+
+.bandeira > div{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* Japão */
+#japao{ background:white; }
+#japao > .circulo{
+  width:120px;
+  height:120px;
+  background:red;
+  border-radius:50%;
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+}
+
+/* Alemanha */
+#alemanha{ display:flex; flex-direction:column; }
+#alemanha .faixa1{ background:black; flex:1; }
+#alemanha .faixa2{ background:red; flex:1; }
+#alemanha .faixa3{ background:yellow; flex:1; }
+
+/* Holanda */
+#holanda{ display:flex; flex-direction:column; }
+#holanda .faixa1{ background:red; flex:1; }
+#holanda .faixa2{ background:white; flex:1; }
+#holanda .faixa3{ background:blue; flex:1; }
+
+/* Itália */
+#italia{ display:flex; }
+#italia .faixa1{ background:green; flex:1; }
+#italia .faixa2{ background:white; flex:1; }
+#italia .faixa3{ background:red; flex:1; }
+
+/* Brasil */
+#brasil{ background:green; }
+#brasil .losango{
+  width:75%;
+  aspect-ratio:1/1;
+  background:yellow;
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%) rotate(45deg) scale(0.7071);
+}
+#brasil .circulo{
+  width:32%;
+  aspect-ratio:1/1;
+  background:blue;
+  border-radius:50%;
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+}
+</style>
+</head>
+<body>
+
+<div class="grid">
+
+  <div style="width:100%; text-align:center; margin-bottom:8px;">
+    <a href="#japao">Japão</a> |
+    <a href="#alemanha">Alemanha</a> |
+    <a href="#holanda">Holanda</a> |
+    <a href="#italia">Itália</a> |
+    <a href="#brasil">Brasil</a>
+  </div>
+
+  <div id="japao" class="bandeira">
+    <div class="circulo"></div>
+  </div>
+
+  <div id="alemanha" class="bandeira">
+    <div class="faixa1"></div>
+    <div class="faixa2"></div>
+    <div class="faixa3"></div>
+  </div>
+
+  <div id="holanda" class="bandeira">
+    <div class="faixa1"></div>
+    <div class="faixa2"></div>
+    <div class="faixa3"></div>
+  </div>
+
+  <div id="italia" class="bandeira">
+    <div class="faixa1"></div>
+    <div class="faixa2"></div>
+    <div class="faixa3"></div>
+  </div>
+
+  <div id="brasil" class="bandeira">
+    <div class="losango"></div>
+    <div class="circulo"></div>
+  </div>
+
+</div>
+
+</body>
+</html>

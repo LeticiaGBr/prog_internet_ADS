@@ -1,0 +1,72 @@
+body {
+    background: white;
+}
+
+.container {
+    width: 420px;
+    margin: 40px auto;
+    padding: 15px;
+    background: rgb(236, 236, 236);
+    border: 1px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.mensagem {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background: lightgrey;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.perfil {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.texto {
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.hora {
+    float: right;
+    font-size: 11px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.eu {
+    background: lightgreen;
+    border: 1px;
+}
+
+.eu .perfil {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 10px;
+    padding: 7px 14px;
+    border: 1px solid lightgray;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+}

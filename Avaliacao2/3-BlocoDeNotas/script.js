@@ -9,20 +9,25 @@ document.addEventListener("DOMContentLoaded", () => {
     let notas = JSON.parse(localStorage.getItem("notas")) || [];
     let indiceSelecionado = null;
 
+    // Salva a lista de notas no navegador para não perder ao recarregar a página
     function salvar() {
         localStorage.setItem("notas", JSON.stringify(notas));
     }
 
+    // Atualiza a lista visual de notas na tela
+    // Ela recria os <li> toda vez que algo muda
     function mostrarNotas() {
         listaEl.innerHTML = "";
 
         notas.forEach((nota, i) => {
             const li = document.createElement("li");
+            // Mostramos apenas parte do texto para não ocupar muito espaço
             li.textContent = nota.text.substring(0, 80) || "(vazia)";
             li.onclick = () => abrirNota(i);
             listaEl.appendChild(li);
         });
 
+        // Caso não exista nenhuma nota cadastrada
         if (notas.length === 0) {
             const li = document.createElement("li");
             li.textContent = "Nenhuma nota";
@@ -30,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Carrega o texto da nota selecionada para o campo de edição
     function abrirNota(i) {
         indiceSelecionado = i;
         textoEl.value = notas[i].text;

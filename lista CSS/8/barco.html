@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cena</title>
+
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: linear-gradient(skyblue, white);
+        height: 100vh;
+    }
+
+    .nuvem {
+        position: absolute;
+        top: 40px;
+        left: -300px;
+        width: 250px;
+        height: 90px;
+        background: white;
+        border-radius: 60px;
+        filter: blur(2px);
+        animation: moverNuvem 25s linear infinite;
+    }
+
+    @keyframes moverNuvem {
+        from { left: -300px; }
+        to   { left: 110%; }
+    }
+
+    .mar {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50vh;
+        background: #0077ff;
+    }
+
+    .barco {
+        position: absolute;
+        bottom: 50vh;
+        left: -260px;
+        width: 260px;
+        height: 180px;
+        background: url('barco.jpg') center/contain no-repeat;
+        animation: moverBarco 15s linear infinite, balancar 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes moverBarco {
+        from { left: -260px; }
+        to   { left: 110%; }
+    }
+
+    @keyframes balancar {
+        from { transform: translateY(0) rotate(-2deg); }
+        to   { transform: translateY(0) rotate(2deg); }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="nuvem"></div>
+<div class="mar"></div>
+<div class="barco"></div>
+
+</body>
+</html>

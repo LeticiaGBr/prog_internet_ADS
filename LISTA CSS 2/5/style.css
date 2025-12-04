@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    height: 300px;
+}
+
+.card {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transition: flex .4s ease;
+}
+
+.galeria:hover .card {
+    flex: 0.7;
+}
+
+.card:hover {
+    flex: 4;
+}

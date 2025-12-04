@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+}
+
+.caixa {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topo-esquerda {
+    top: 0;
+    left: 0;
+	background: red;
+}
+
+.topo-direita {
+    top: 0;
+    right: 0;
+	background: yellow;
+}
+
+.centro {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background: pink;
+}
+
+.baixo-esquerda {
+    bottom: 0;
+    left: 0;
+	background: blue;
+}
+
+.baixo-direita {
+    bottom: 0;
+    right: 0;
+	background: green;
+}

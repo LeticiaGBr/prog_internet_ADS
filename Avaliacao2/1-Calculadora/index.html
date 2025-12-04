@@ -44,22 +44,27 @@
         tela.value += value;
     }
 
-
     function limpaTela() {
         tela.value = "";
     }
 
     function calculate() {
         try {
+
+            // Verifica se a expressão contém somente números, operadores matemáticos, parênteses, ponto e espaço. 
             if (/^[0-9+\-*/.() ]+$/.test(tela.value)) {
+
                 tela.value = eval(tela.value);
+
             } else {
                 alert("expressão inválida, tente de novo!");
             }
+
         } catch {
             alert("erro");
         }
     }
 </script>
+
 </body>
 </html>

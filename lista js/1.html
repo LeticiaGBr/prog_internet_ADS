@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript?</title>
+</head>
+<body>
+    <h1 id="titulo">O que é JavaScript?</h1>
+
+    <p id="explicacao">
+        JavaScript é uma linguagem de programação usada para tornar as páginas web interativas. 
+        Com ele, é possível adicionar efeitos, mudanças de conteúdo e até jogos na página sem recarregar. 
+    </p>
+
+    <h2 id="motivo">Motivação para a criação do JavaScript</h2>
+    <p id="motivo-texto">
+        O JavaScript foi criado para deixar as páginas web mais dinâmicas e interativas, permitindo que o conteúdo da página mude sem recarregar.
+    </p>
+
+    <h2 id="navegador-vs-servidor">Execução no Navegador vs. Servidor</h2>
+    <p id="execucao-texto">
+        O JavaScript pode rodar no navegador, onde interage com a página que o usuário vê, ou no servidor, onde processa dados e gera conteúdo para a página.
+    </p>
+
+    <h2 id="sandbox">O que é Sandbox?</h2>
+    <p id="sandbox-texto">
+        No navegador, o JavaScript é executado em um ambiente isolado (chamado de "sandbox") para evitar que ele acesse ou altere dados do usuário sem permissão.
+    </p>
+
+    <h2 id="objetos-globais">Objetos Globais</h2>
+    <p id="objetos-texto">
+        JavaScript tem objetos globais que podem ser usados em qualquer lugar, como:
+        <ul>
+            <li><code>document</code>: Permite manipular o conteúdo da página.</li>
+            <li><code>console</code>: Mostra mensagens no console para depuração.</li>
+            <li><code>alert()</code>: Exibe mensagens para o usuário em uma janela pop-up.</li>
+        </ul>
+    </p>
+
+    <p id="hora"></p>
+
+    <script>
+        alert('Bem-vindo ao JavaScript!');
+
+        console.log('JavaScript carregado!');
+
+        const data = new Date();
+        document.getElementById('hora').innerHTML = "Hora atual: " + data.toLocaleTimeString();
+    </script>
+</body>
+</html>

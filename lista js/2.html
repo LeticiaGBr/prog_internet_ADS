@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Variáveis e Operadores</title>
+</head>
+<body>
+    <h1 id="titulo">Tipos de Variáveis e Operadores</h1>
+
+    <button onclick="executarScript()">Clique para ver os tipos e operações</button>
+
+    <h2>Tipos de Variáveis:</h2>
+    <p id="pstring">Tipo da string:</p>
+    <p id="pnumero">Tipo do número:</p>
+    <p id="pbooleano">Tipo do booleano:</p>
+    <p id="pundefined">Tipo do undefined:</p>
+    <p id="pnull">Tipo do null:</p>
+    <p id="pobject">Tipo do objeto:</p>
+    <p id="parray">Tipo do array:</p>
+
+    <h2>Operações:</h2>
+    <p id="poperacoes">Operações entre tipos:</p>
+
+    <script>
+        function executarScript() {
+        
+            var stringVar = "Olá, mundo!";      
+            var numberVar = 42;                 
+            var booleanVar = true;              
+            var undefinedVar;                   
+            var nullVar = null;                
+            var objectVar = { nome: "João", idade: 30 };  
+            var arrayVar = [1, 2, 3];          
+
+            document.getElementById('pstring').innerText = "Tipo da string: " + typeof stringVar;
+            document.getElementById('pnumero').innerText = "Tipo do número: " + typeof numberVar;
+            document.getElementById('pbooleano').innerText = "Tipo do booleano: " + typeof booleanVar;
+            document.getElementById('pundefined').innerText = "Tipo do undefined: " + typeof undefinedVar;
+            document.getElementById('pnull').innerText = "Tipo do null: " + typeof nullVar;
+            document.getElementById('pobject').innerText = "Tipo do objeto: " + typeof objectVar;
+            document.getElementById('parray').innerText = "Tipo do array: " + typeof arrayVar;
+
+            
+            var operacao1 = stringVar + numberVar;     
+            var operacao2 = booleanVar * numberVar;    
+            var operacao3 = nullVar + numberVar;       
+            var operacao4 = stringVar + booleanVar;   
+
+            console.log("string + number: " + operacao1);
+            console.log("boolean * number: " + operacao2);
+            console.log("null + number: " + operacao3);
+            console.log("string + boolean: " + operacao4);
+            
+            document.getElementById('poperacoes').innerText = `
+                string + number: ${operacao1} (Resultado de concatenar uma string com um número)
+                boolean * number: ${operacao2} (O booleano é convertido para 1 ou 0, então é multiplicado pelo número)
+                null + number: ${operacao3} (null é convertido para 0, então soma com o número)
+                string + boolean: ${operacao4} (O booleano é convertido para 'true' ou 'false', e é concatenado com a string)
+            `;
+        }
+    </script>
+</body>
+</html>

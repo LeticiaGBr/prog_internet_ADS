@@ -34,25 +34,19 @@
 
     <script>
         function calcularIMC() {
-            // Obter os valores de entrada
             var nome = document.getElementById('nome').value;
             var peso = parseFloat(document.getElementById('peso').value);
             var altura = parseFloat(document.getElementById('altura').value);
 
-            // Verificar se todos os campos foram preenchidos
             if (nome === "" || isNaN(peso) || isNaN(altura)) {
                 alert("Por favor, preencha todos os campos.");
                 return;
             }
 
-            // Calcular o IMC
             var imc = peso / (altura * altura);
-            imc = imc.toFixed(2); // Arredondar para duas casas decimais
 
-            // Exibir o resultado do IMC
             document.getElementById('resultadoIMC').innerText = "IMC: " + imc;
 
-            // Classificar o IMC
             var classificacao = "";
             if (imc < 18.5) {
                 classificacao = "Abaixo do peso";
@@ -68,35 +62,32 @@
                 classificacao = "Obesidade grau 3 (mórbida)";
             }
 
-            // Exibir a classificação
             document.getElementById('classificacao').innerText = "Classificação: " + classificacao;
 
-            // Exibir a imagem de acordo com a classificação usando switch
-            var imcFaixa = Math.floor(imc); // Arredondar para a faixa inteira
+            var imcFaixa = Math.floor(imc); 
 
             var imgSrc = "";
             switch (true) {
                 case (imc < 18.5):
-                    imgSrc = "./imgs/magro.png";
+                    imgSrc = "imgs/magro.png";
                     break;
                 case (imc >= 18.5 && imc < 24.9):
-                    imgSrc = "./imgs/normal.png";
+                    imgSrc = "imgs/normal.png";
                     break;
                 case (imc >= 25 && imc < 29.9):
-                    imgSrc = "./imgs/sobrepeso.png";
+                    imgSrc = "imgs/sobrepeso.jpg";
                     break;
                 case (imc >= 30 && imc < 34.9):
-                    imgSrc = "./imgs/obesidade1.png";
+                    imgSrc = "imgs/obesidade1.jpg";
                     break;
                 case (imc >= 35 && imc < 39.9):
-                    imgSrc = "./imgs/obesidade2.png";
+                    imgSrc = "imgs/obesidade2.jpg";
                     break;
                 case (imc >= 40):
-                    imgSrc = "./imgs/obesidade3.png";
+                    imgSrc = "imgs/obesidade3.jpg";
                     break;
             }
 
-            // Definir a imagem no HTML
             document.getElementById('imgPerfil').src = imgSrc;
             document.getElementById('imgPerfil').alt = classificacao;
         }

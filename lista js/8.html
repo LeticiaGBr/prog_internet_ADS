@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alteração de Cores</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            gap: 0;
+        }
+
+        .bloco {
+            width: 160px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="bloco" id="b1">------</div>
+        <div class="bloco" id="b2">------</div>
+        <div class="bloco" id="b3">------</div>
+        <div class="bloco" id="b4">------</div>
+        <div class="bloco" id="b5">------</div>
+    </div>
+
+    <script>
+        function corAleatoria() {
+            return "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0");
+        }
+
+        function mudarCores() {
+            for (let i = 1; i <= 5; i++) {
+                const bloco = document.getElementById("b" + i);
+                const cor = corAleatoria();
+                bloco.style.backgroundColor = cor;
+                bloco.textContent = cor.replace("#", "").toUpperCase();
+            }
+        }
+
+        document.addEventListener("keydown", function(evento) {
+            if (evento.code === "Space") {
+                evento.preventDefault();
+                mudarCores();
+            }
+        });
+
+        mudarCores();
+    </script>
+
+</body>
+</html>

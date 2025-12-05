@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Números Primos</title>
+<style>
+  body { 
+    padding: 20px; 
+}
+  input { 
+    margin: 5px 0; 
+    padding: 6px;
+    width: 150px; 
+}
+  button { 
+    padding: 6px 12px; 
+    margin-top: 10px; 
+    cursor: pointer; 
+}
+  #resultadoPrimos { 
+    margin-top: 15px; 
+    font-weight: bold; 
+    }
+</style>
+</head>
+<body>
+
+<h1>Números Primos em um Intervalo</h1>
+
+<label>Início:</label><br>
+<input type="number" id="inicio"><br>
+
+<label>Fim:</label><br>
+<input type="number" id="fim"><br>
+
+<button onclick="verificarPrimos()">Verificar</button>
+
+<div id="resultadoPrimos"></div>
+
+<script>
+function ehPrimo(numero) {
+    if (numero < 2) return false;
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) return false;
+    }
+    return true;
+}
+
+function verificarPrimos() {
+    const inicio = Number(document.getElementById("inicio").value);
+    const fim = Number(document.getElementById("fim").value);
+    const resultado = document.getElementById("resultadoPrimos");
+
+    if (inicio > fim) {
+        resultado.textContent = "O valor inicial deve ser menor que o final.";
+        return;
+    }
+
+    let lista = [];
+
+    for (let n = inicio; n <= fim; n++) {
+        if (ehPrimo(n)) lista.push(n);
+    }
+
+    resultado.textContent = lista.length > 0
+        ? "Primos encontrados: " + lista.join(", ")
+        : "Nenhum número primo encontrado no intervalo.";
+}
+</script>
+
+</body>
+</html>

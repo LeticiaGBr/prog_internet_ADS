@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+
+    <style>
+        body { 
+            font-family: Arial; 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: lightgray;
+            margin: 0;
+        }
+
+        .calc {
+            width: 275px;
+            box-sizing: border-box;
+        }
+
+        #tela {
+            width: 100%;
+            height: 45px;
+            text-align: right;
+            font-size: 22px;
+            margin-bottom: 10px;
+            padding-right: 10px;
+            border: 1px solid gray;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-auto-rows: 60px; 
+            gap: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            font-size: 18px;
+            cursor: pointer;
+            border: 1px solid gray;
+            background: gainsboro;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+        }
+
+        button:hover {
+            background: silver;
+        }
+
+        .equal {
+            background: blue;
+            color: white;
+            font-weight: bold;
+
+            grid-column: 5;     
+            grid-row: 1 / span 4;
+
+            align-self: stretch;
+            justify-self: stretch;
+        }
+
+        .equal:hover {
+            background: royalblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calc">
+    <input id="tela" readonly>
+
+    <div class="botoes">
+
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+        <button onclick="add('/')">/</button>
+ 
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+        <button onclick="add('*')">*</button>
+
+        <button onclick="add('1')">1</button>
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+        <button onclick="add('-')">-</button>
+
+        <button onclick="add('0')">0</button>
+        <button onclick="add('.')">.</button>
+        <button onclick="limpaTela()">C</button>
+        <button onclick="add('+')">+</button>
+    
+        <button onclick="calculate()" class="equal">=</button>
+    
+    </div>
+</div>
+
+<script>
+    const tela = document.getElementById("tela");
+
+    function add(value) {
+        tela.value += value;
+    }
+
+    function limpaTela() {
+        tela.value = "";
+    }
+
+    function calculate() {
+        try {
+
+            // Verifica se a expressão contém somente números, operadores matemáticos, parênteses, ponto e espaço. 
+            if (/^[0-9+\-*/.() ]+$/.test(tela.value)) {
+
+                tela.value = eval(tela.value);
+
+            } else {
+                alert("expressão inválida, tente de novo!");
+            }
+
+        } catch {
+            alert("erro");
+        }
+    }
+</script>
+
+</body>
+</html>
